@@ -14,7 +14,7 @@ maintenance = { status = "passively-maintained" }
 
 [dependencies]
 bitflags = "1.2"
-embedded-hal = "=1.0.0-alpha.5"
+embedded-hal = "=1.0.0-alpha.9"
 log = "0.4"
 serde = { version = "1.0", optional = true, default-features = false }
 
@@ -26,5 +26,5 @@ influx_db_client = { version = "0.5", default-features= false, features = ["rust
 tokio = {version = "1.5", features = ["full"] }
 url = "2.1"
 
-[target.'cfg(target_os = "linux")'.dev-dependencies]
-linux-embedded-hal = "0.4.0-alpha.1"
+# [target.'cfg(target_os = "linux")'.dev-dependencies]
+# linux-embedded-hal = "0.4.0-alpha.1"
