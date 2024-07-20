@@ -121,7 +121,7 @@ impl Clone for SensorSettings {
 bitflags! {
     /// Flags that determine what settings are to be set and what settings are to be read.
     /// Use the `SettingsBuilder` to initialize an instance when setting the settings.
-    #[derive(Default)]
+    #[derive(Default, Clone, Copy)]
     pub struct DesiredSensorSettings: u16 {
         /// To set temperature oversampling
         const OST_SEL = 1;
@@ -140,7 +140,7 @@ bitflags! {
         /// To set NB conversion setting.
         const NBCONV_SEL = 128;
         /// To set all gas sensor related settings
-        const GAS_SENSOR_SEL = Self::GAS_MEAS_SEL.bits | Self::RUN_GAS_SEL.bits | Self::NBCONV_SEL.bits;
+        const GAS_SENSOR_SEL = Self::GAS_MEAS_SEL.bits() | Self::RUN_GAS_SEL.bits() | Self::NBCONV_SEL.bits();
     }
 }
 

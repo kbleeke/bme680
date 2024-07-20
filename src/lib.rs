@@ -98,7 +98,7 @@ use crate::calc::Calc;
 
 use core::time::Duration;
 use core::{marker::PhantomData, result};
-use embedded_hal_async::delay::DelayUs;
+use embedded_hal_async::delay::DelayNs;
 use embedded_hal_async::i2c::I2c;
 use log::{debug, error, info};
 
@@ -447,7 +447,7 @@ where
 
 impl<I2C, D> Bme680<I2C, D>
 where
-    D: DelayUs,
+    D: DelayNs,
     I2C: I2c,
 {
     pub async fn soft_reset(

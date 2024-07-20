@@ -13,9 +13,9 @@ travis-ci = { repository = "https://github.com/marcelbuesing/bme680-hal", branch
 maintenance = { status = "passively-maintained" }
 
 [dependencies]
-bitflags = "1.2"
-embedded-hal = "=1.0.0-rc.1"
-embedded-hal-async = "1.0.0-rc.1"
+bitflags = "2.4.2"
+embedded-hal = "1.0.0"
+embedded-hal-async = "1.0.0"
 log = "0.4"
 serde = { version = "1.0", optional = true, default-features = false }
 
